@@ -1,0 +1,9 @@
+Z:\ASPNET1\2019Bahar\aspnet\MasterPageProject\FirstMasterPage\FirstMasterPage\bin\FirstMasterPage.dll.config
+Z:\ASPNET1\2019Bahar\aspnet\MasterPageProject\FirstMasterPage\FirstMasterPage\bin\FirstMasterPage.dll
+Z:\ASPNET1\2019Bahar\aspnet\MasterPageProject\FirstMasterPage\FirstMasterPage\bin\FirstMasterPage.pdb
+Z:\ASPNET1\2019Bahar\aspnet\MasterPageProject\FirstMasterPage\FirstMasterPage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+Z:\ASPNET1\2019Bahar\aspnet\MasterPageProject\FirstMasterPage\FirstMasterPage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+Z:\ASPNET1\2019Bahar\aspnet\MasterPageProject\FirstMasterPage\FirstMasterPage\obj\Debug\FirstMasterPage.csproj.CoreCompileInputs.cache
+Z:\ASPNET1\2019Bahar\aspnet\MasterPageProject\FirstMasterPage\FirstMasterPage\obj\Debug\FirstMasterPage.dll
+Z:\ASPNET1\2019Bahar\aspnet\MasterPageProject\FirstMasterPage\FirstMasterPage\obj\Debug\FirstMasterPage.pdb
+Z:\ASPNET1\2019Bahar\aspnet\MasterPageProject\FirstMasterPage\FirstMasterPage\obj\Debug\FirstMasterPage.csprojResolveAssemblyReference.cache

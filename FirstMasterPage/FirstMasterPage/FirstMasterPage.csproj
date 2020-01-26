@@ -1,0 +1,660 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8756C149-77B0-4275-BF74-057C3DEFE8D8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FirstMasterPage</RootNamespace>
+    <AssemblyName>FirstMasterPage</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\ilkVeritabani.mdb" />
+    <Content Include="Default.aspx" />
+    <Content Include="Hakkimizda.aspx" />
+    <Content Include="Iletisim.aspx" />
+    <Content Include="images\.DS_Store" />
+    <Content Include="images\about\.DS_Store" />
+    <Content Include="images\flexslider\.DS_Store" />
+    <Content Include="images\home\.DS_Store" />
+    <Content Include="images\socials\.DS_Store" />
+    <Content Include="js\.DS_Store" />
+    <Content Include="js\poshytip-1.0\.DS_Store" />
+    <Content Include="js\poshytip-1.0\src\.DS_Store" />
+    <Content Include="Main.Master" />
+    <None Include="packages.config" />
+    <Content Include="css\base.css" />
+    <Content Include="css\prettyPhoto.css" />
+    <Content Include="css\screen.css" />
+    <Content Include="css\skeleton.css" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\about.png" />
+    <Content Include="images\about\1.jpg" />
+    <Content Include="images\about\toggle.png" />
+    <Content Include="images\apple-touch-icon-114x114.png" />
+    <Content Include="images\apple-touch-icon-72x72.png" />
+    <Content Include="images\apple-touch-icon.png" />
+    <Content Include="images\blog.png" />
+    <Content Include="images\blog\1.png" />
+    <Content Include="images\blog\2.png" />
+    <Content Include="images\client1.jpg" />
+    <Content Include="images\client2.jpg" />
+    <Content Include="images\client3.jpg" />
+    <Content Include="images\client4.jpg" />
+    <Content Include="images\client5.jpg" />
+    <Content Include="images\client6.jpg" />
+    <Content Include="images\contact.png" />
+    <Content Include="images\favicon.png" />
+    <Content Include="images\features.png" />
+    <Content Include="images\flexslider\3.jpg" />
+    <Content Include="images\flexslider\4.jpg" />
+    <Content Include="images\flexslider\6.jpg" />
+    <Content Include="images\flexslider\bg_direction_nav.png" />
+    <Content Include="images\freebies.png" />
+    <Content Include="images\home.png" />
+    <Content Include="images\home\1.png" />
+    <Content Include="images\home\2.png" />
+    <Content Include="images\home\3.png" />
+    <Content Include="images\loader.gif" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\navselect.gif" />
+    <Content Include="images\portfolio.png" />
+    <Content Include="images\portfolio\1.jpg" />
+    <Content Include="images\portfolio\2.jpg" />
+    <Content Include="images\portfolio\3.jpg" />
+    <Content Include="images\portfolio\bigsize.jpg" />
+    <Content Include="images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="images\prettyPhoto\default\loader.gif" />
+    <Content Include="images\prettyPhoto\default\sprite.png" />
+    <Content Include="images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="images\raster.png" />
+    <Content Include="images\shop.png" />
+    <Content Include="images\socials\dribbble.png" />
+    <Content Include="images\socials\facebook.png" />
+    <Content Include="images\socials\google.png" />
+    <Content Include="images\socials\twitter.png" />
+    <Content Include="js\hoverIntent.js" />
+    <Content Include="js\jquery-1.8.0.min.js" />
+    <Content Include="js\jquery.flexslider-min.js" />
+    <Content Include="js\jquery.prettyPhoto.js" />
+    <Content Include="js\jquery.tweetable.js" />
+    <Content Include="js\menu.js" />
+    <Content Include="js\modernizr.custom.29473.js" />
+    <Content Include="js\poshytip-1.0\GPL-LICENSE.txt" />
+    <Content Include="js\poshytip-1.0\MIT-LICENSE.txt" />
+    <Content Include="js\poshytip-1.0\README.txt" />
+    <Content Include="js\poshytip-1.0\src\jquery.poshytip.js" />
+    <Content Include="js\poshytip-1.0\src\jquery.poshytip.min.js" />
+    <Content Include="js\poshytip-1.0\src\tip-twitter\tip-twitter.css" />
+    <Content Include="js\poshytip-1.0\src\tip-twitter\tip-twitter_arrows.gif" />
+    <Content Include="js\screen.js" />
+    <Content Include="js\superfish.js" />
+    <Content Include="js\tabs.js" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="QueryStringVeriOku.aspx" />
+    <Content Include="QueryStringVeriYaz.aspx" />
+    <Content Include="SessionOku.aspx" />
+    <Content Include="SessionYaz.aspx" />
+    <Content Include="Yonetim\Admin.Master" />
+    <Content Include="Yonetim\DersEkle.aspx" />
+    <Content Include="Yonetim\DersOgrenciEkle.aspx" />
+    <Content Include="Yonetim\Giris.aspx" />
+    <Content Include="Yonetim\Iletisim.aspx" />
+    <Content Include="Yonetim\img\uyari.png" />
+    <Content Include="Yonetim\KullaniciEkle.aspx" />
+    <Content Include="Yonetim\Kullanicilar.aspx" />
+    <Content Include="Yonetim\misc\elfinder-connector\mime.types" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Resimler\banner-sample.png" />
+    <Content Include="Web.config" />
+    <Content Include="Yonetim\css\bootstrap-cerulean.css" />
+    <Content Include="Yonetim\css\bootstrap-classic.css" />
+    <Content Include="Yonetim\css\bootstrap-classic.min.css" />
+    <Content Include="Yonetim\css\bootstrap-cyborg.css" />
+    <Content Include="Yonetim\css\bootstrap-journal.css" />
+    <Content Include="Yonetim\css\bootstrap-redy.css" />
+    <Content Include="Yonetim\css\bootstrap-responsive.css" />
+    <Content Include="Yonetim\css\bootstrap-responsive.min.css" />
+    <Content Include="Yonetim\css\bootstrap-simplex.css" />
+    <Content Include="Yonetim\css\bootstrap-slate.css" />
+    <Content Include="Yonetim\css\bootstrap-spacelab.css" />
+    <Content Include="Yonetim\css\bootstrap-united.css" />
+    <Content Include="Yonetim\css\charisma-app.css" />
+    <Content Include="Yonetim\css\chosen.css" />
+    <Content Include="Yonetim\css\colorbox.css" />
+    <Content Include="Yonetim\css\elfinder.min.css" />
+    <Content Include="Yonetim\css\elfinder.theme.css" />
+    <Content Include="Yonetim\css\fullcalendar.css" />
+    <Content Include="Yonetim\css\fullcalendar.print.css" />
+    <Content Include="Yonetim\css\jquery-ui-1.8.21.custom.css" />
+    <Content Include="Yonetim\css\jquery.cleditor.css" />
+    <Content Include="Yonetim\css\jquery.iphone.toggle.css" />
+    <Content Include="Yonetim\css\jquery.noty.css" />
+    <Content Include="Yonetim\css\noty_theme_default.css" />
+    <Content Include="Yonetim\css\opa-icons.css" />
+    <Content Include="Yonetim\css\uniform.default.css" />
+    <Content Include="Yonetim\css\uploadify.css" />
+    <Content Include="Yonetim\Default.aspx" />
+    <Content Include="Yonetim\doc\assets\images\html_structure.png" />
+    <Content Include="Yonetim\doc\assets\images\image_1.png" />
+    <Content Include="Yonetim\doc\css\documenter_style.css" />
+    <Content Include="Yonetim\doc\css\img\info.png" />
+    <Content Include="Yonetim\doc\css\img\pre_bg.png" />
+    <Content Include="Yonetim\doc\css\img\warning.png" />
+    <Content Include="Yonetim\doc\favicon.ico" />
+    <Content Include="Yonetim\doc\index.html" />
+    <Content Include="Yonetim\doc\js\jquery.1.6.4.js" />
+    <Content Include="Yonetim\doc\js\jquery.easing.js" />
+    <Content Include="Yonetim\doc\js\jquery.scrollTo-1.4.2-min.js" />
+    <Content Include="Yonetim\doc\js\script.js" />
+    <Content Include="Yonetim\img\ajax-loaders\ajax-loader-1.gif" />
+    <Content Include="Yonetim\img\ajax-loaders\ajax-loader-2.gif" />
+    <Content Include="Yonetim\img\ajax-loaders\ajax-loader-3.gif" />
+    <Content Include="Yonetim\img\ajax-loaders\ajax-loader-4.gif" />
+    <Content Include="Yonetim\img\ajax-loaders\ajax-loader-5.gif" />
+    <Content Include="Yonetim\img\ajax-loaders\ajax-loader-6.gif" />
+    <Content Include="Yonetim\img\ajax-loaders\ajax-loader-7.gif" />
+    <Content Include="Yonetim\img\ajax-loaders\ajax-loader-8.gif" />
+    <Content Include="Yonetim\img\arrows-active.png" />
+    <Content Include="Yonetim\img\arrows-normal.png" />
+    <Content Include="Yonetim\img\bg-input-focus.png" />
+    <Content Include="Yonetim\img\bg-input.png" />
+    <Content Include="Yonetim\img\border.png" />
+    <Content Include="Yonetim\img\buttons.gif" />
+    <Content Include="Yonetim\img\cancel-off.png" />
+    <Content Include="Yonetim\img\cancel-on.png" />
+    <Content Include="Yonetim\img\chosen-sprite.png" />
+    <Content Include="Yonetim\img\controls.png" />
+    <Content Include="Yonetim\img\crop.gif" />
+    <Content Include="Yonetim\img\dialogs.png" />
+    <Content Include="Yonetim\img\error_bg.png" />
+    <Content Include="Yonetim\img\favicon.ico" />
+    <Content Include="Yonetim\img\gallery\.tmb\l1_Mi5qcGc1344290242.png" />
+    <Content Include="Yonetim\img\gallery\.tmb\l1_MjAuanBn1344290232.png" />
+    <Content Include="Yonetim\img\gallery\.tmb\l1_MjEuanBn1344290232.png" />
+    <Content Include="Yonetim\img\gallery\.tmb\l1_MjIuanBn1344290236.png" />
+    <Content Include="Yonetim\img\gallery\.tmb\l1_MjMuanBn1344290238.png" />
+    <Content Include="Yonetim\img\gallery\.tmb\l1_MjQuanBn1344290240.png" />
+    <Content Include="Yonetim\img\gallery\.tmb\l1_MS5qcGc1344290228.png" />
+    <Content Include="Yonetim\img\gallery\.tmb\l1_MTAuanBn1344290212.png" />
+    <Content Include="Yonetim\img\gallery\.tmb\l1_MTcuanBn1344290224.png" />
+    <Content Include="Yonetim\img\gallery\.tmb\l1_MTEuanBn1344290212.png" />
+    <Content Include="Yonetim\img\gallery\.tmb\l1_MTguanBn1344290226.png" />
+    <Content Include="Yonetim\img\gallery\.tmb\l1_MTIuanBn1344290216.png" />
+    <Content Include="Yonetim\img\gallery\.tmb\l1_MTkuanBn1344290228.png" />
+    <Content Include="Yonetim\img\gallery\.tmb\l1_MTMuanBn1344290218.png" />
+    <Content Include="Yonetim\img\gallery\.tmb\l1_MTQuanBn1344290218.png" />
+    <Content Include="Yonetim\img\gallery\.tmb\l1_MTUuanBn1344290220.png" />
+    <Content Include="Yonetim\img\gallery\.tmb\l1_MTYuanBn1344290222.png" />
+    <Content Include="Yonetim\img\gallery\.tmb\l1_My5qcGc1344290244.png" />
+    <Content Include="Yonetim\img\gallery\.tmb\l1_NC5qcGc1344290246.png" />
+    <Content Include="Yonetim\img\gallery\.tmb\l1_Ni5qcGc1344290248.png" />
+    <Content Include="Yonetim\img\gallery\.tmb\l1_NS5qcGc1344290246.png" />
+    <Content Include="Yonetim\img\gallery\.tmb\l1_Ny5qcGc1344290252.png" />
+    <Content Include="Yonetim\img\gallery\.tmb\l1_OC5qcGc1344290254.png" />
+    <Content Include="Yonetim\img\gallery\.tmb\l1_OS5qcGc1344290254.png" />
+    <Content Include="Yonetim\img\gallery\1.jpg" />
+    <Content Include="Yonetim\img\gallery\10.jpg" />
+    <Content Include="Yonetim\img\gallery\11.jpg" />
+    <Content Include="Yonetim\img\gallery\12.jpg" />
+    <Content Include="Yonetim\img\gallery\13.jpg" />
+    <Content Include="Yonetim\img\gallery\14.jpg" />
+    <Content Include="Yonetim\img\gallery\15.jpg" />
+    <Content Include="Yonetim\img\gallery\16.jpg" />
+    <Content Include="Yonetim\img\gallery\17.jpg" />
+    <Content Include="Yonetim\img\gallery\18.jpg" />
+    <Content Include="Yonetim\img\gallery\19.jpg" />
+    <Content Include="Yonetim\img\gallery\2.jpg" />
+    <Content Include="Yonetim\img\gallery\20.jpg" />
+    <Content Include="Yonetim\img\gallery\21.jpg" />
+    <Content Include="Yonetim\img\gallery\22.jpg" />
+    <Content Include="Yonetim\img\gallery\23.jpg" />
+    <Content Include="Yonetim\img\gallery\24.jpg" />
+    <Content Include="Yonetim\img\gallery\3.jpg" />
+    <Content Include="Yonetim\img\gallery\4.jpg" />
+    <Content Include="Yonetim\img\gallery\5.jpg" />
+    <Content Include="Yonetim\img\gallery\6.jpg" />
+    <Content Include="Yonetim\img\gallery\7.jpg" />
+    <Content Include="Yonetim\img\gallery\8.jpg" />
+    <Content Include="Yonetim\img\gallery\9.jpg" />
+    <Content Include="Yonetim\img\gallery\thumbs\1.jpg" />
+    <Content Include="Yonetim\img\gallery\thumbs\10.jpg" />
+    <Content Include="Yonetim\img\gallery\thumbs\11.jpg" />
+    <Content Include="Yonetim\img\gallery\thumbs\12.jpg" />
+    <Content Include="Yonetim\img\gallery\thumbs\13.jpg" />
+    <Content Include="Yonetim\img\gallery\thumbs\14.jpg" />
+    <Content Include="Yonetim\img\gallery\thumbs\15.jpg" />
+    <Content Include="Yonetim\img\gallery\thumbs\16.jpg" />
+    <Content Include="Yonetim\img\gallery\thumbs\17.jpg" />
+    <Content Include="Yonetim\img\gallery\thumbs\18.jpg" />
+    <Content Include="Yonetim\img\gallery\thumbs\19.jpg" />
+    <Content Include="Yonetim\img\gallery\thumbs\2.jpg" />
+    <Content Include="Yonetim\img\gallery\thumbs\20.jpg" />
+    <Content Include="Yonetim\img\gallery\thumbs\21.jpg" />
+    <Content Include="Yonetim\img\gallery\thumbs\22.jpg" />
+    <Content Include="Yonetim\img\gallery\thumbs\23.jpg" />
+    <Content Include="Yonetim\img\gallery\thumbs\24.jpg" />
+    <Content Include="Yonetim\img\gallery\thumbs\3.jpg" />
+    <Content Include="Yonetim\img\gallery\thumbs\4.jpg" />
+    <Content Include="Yonetim\img\gallery\thumbs\5.jpg" />
+    <Content Include="Yonetim\img\gallery\thumbs\6.jpg" />
+    <Content Include="Yonetim\img\gallery\thumbs\7.jpg" />
+    <Content Include="Yonetim\img\gallery\thumbs\8.jpg" />
+    <Content Include="Yonetim\img\gallery\thumbs\9.jpg" />
+    <Content Include="Yonetim\img\glyphicons-halflings-white.png" />
+    <Content Include="Yonetim\img\glyphicons-halflings.png" />
+    <Content Include="Yonetim\img\icons-big.png" />
+    <Content Include="Yonetim\img\icons-small.png" />
+    <Content Include="Yonetim\img\iphone-style-checkboxes\off.png" />
+    <Content Include="Yonetim\img\iphone-style-checkboxes\on.png" />
+    <Content Include="Yonetim\img\iphone-style-checkboxes\slider.png" />
+    <Content Include="Yonetim\img\iphone-style-checkboxes\slider_center.png" />
+    <Content Include="Yonetim\img\iphone-style-checkboxes\slider_left.png" />
+    <Content Include="Yonetim\img\iphone-style-checkboxes\slider_right.png" />
+    <Content Include="Yonetim\img\loading.gif" />
+    <Content Include="Yonetim\img\loading_background.png" />
+    <Content Include="Yonetim\img\logo.png" />
+    <Content Include="Yonetim\img\logo20.png" />
+    <Content Include="Yonetim\img\opa-icons-black16.png" />
+    <Content Include="Yonetim\img\opa-icons-black32.png" />
+    <Content Include="Yonetim\img\opa-icons-blue16.png" />
+    <Content Include="Yonetim\img\opa-icons-blue32.png" />
+    <Content Include="Yonetim\img\opa-icons-color16.png" />
+    <Content Include="Yonetim\img\opa-icons-color32.png" />
+    <Content Include="Yonetim\img\opa-icons-darkgray16.png" />
+    <Content Include="Yonetim\img\opa-icons-darkgray32.png" />
+    <Content Include="Yonetim\img\opa-icons-gray16.png" />
+    <Content Include="Yonetim\img\opa-icons-gray32.png" />
+    <Content Include="Yonetim\img\opa-icons-green16.png" />
+    <Content Include="Yonetim\img\opa-icons-green32.png" />
+    <Content Include="Yonetim\img\opa-icons-orange16.png" />
+    <Content Include="Yonetim\img\opa-icons-orange32.png" />
+    <Content Include="Yonetim\img\opa-icons-red16.png" />
+    <Content Include="Yonetim\img\opa-icons-red32.png" />
+    <Content Include="Yonetim\img\opa-icons-white16.png" />
+    <Content Include="Yonetim\img\opa-icons-white32.png" />
+    <Content Include="Yonetim\img\progress.gif" />
+    <Content Include="Yonetim\img\qrcode.png" />
+    <Content Include="Yonetim\img\qrcode136.png" />
+    <Content Include="Yonetim\img\quicklook-bg.png" />
+    <Content Include="Yonetim\img\quicklook-icons.png" />
+    <Content Include="Yonetim\img\resize.png" />
+    <Content Include="Yonetim\img\spinner-mini.gif" />
+    <Content Include="Yonetim\img\sprite.png" />
+    <Content Include="Yonetim\img\star-half.png" />
+    <Content Include="Yonetim\img\star-off.png" />
+    <Content Include="Yonetim\img\star-on.png" />
+    <Content Include="Yonetim\img\thumb.png" />
+    <Content Include="Yonetim\img\toolbar.gif" />
+    <Content Include="Yonetim\img\toolbar.png" />
+    <Content Include="Yonetim\img\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Yonetim\img\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Yonetim\img\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Yonetim\img\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Yonetim\img\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Yonetim\img\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Yonetim\img\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Yonetim\img\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Yonetim\img\ui-icons_222222_256x240.png" />
+    <Content Include="Yonetim\img\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Yonetim\img\ui-icons_454545_256x240.png" />
+    <Content Include="Yonetim\img\ui-icons_888888_256x240.png" />
+    <Content Include="Yonetim\img\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Yonetim\img\uploadify-cancel.png" />
+    <Content Include="Yonetim\js\bootstrap-alert.js" />
+    <Content Include="Yonetim\js\bootstrap-button.js" />
+    <Content Include="Yonetim\js\bootstrap-carousel.js" />
+    <Content Include="Yonetim\js\bootstrap-collapse.js" />
+    <Content Include="Yonetim\js\bootstrap-dropdown.js" />
+    <Content Include="Yonetim\js\bootstrap-modal.js" />
+    <Content Include="Yonetim\js\bootstrap-popover.js" />
+    <Content Include="Yonetim\js\bootstrap-scrollspy.js" />
+    <Content Include="Yonetim\js\bootstrap-tab.js" />
+    <Content Include="Yonetim\js\bootstrap-toggle.js" />
+    <Content Include="Yonetim\js\bootstrap-tooltip.js" />
+    <Content Include="Yonetim\js\bootstrap-tour.js" />
+    <Content Include="Yonetim\js\bootstrap-transition.js" />
+    <Content Include="Yonetim\js\bootstrap-typeahead.js" />
+    <Content Include="Yonetim\js\charisma.js" />
+    <Content Include="Yonetim\js\excanvas.js" />
+    <Content Include="Yonetim\js\fullcalendar.min.js" />
+    <Content Include="Yonetim\js\jquery-1.7.2.min.js" />
+    <Content Include="Yonetim\js\jquery-ui-1.8.21.custom.min.js" />
+    <Content Include="Yonetim\js\jquery.autogrow-textarea.js" />
+    <Content Include="Yonetim\js\jquery.chosen.min.js" />
+    <Content Include="Yonetim\js\jquery.cleditor.min.js" />
+    <Content Include="Yonetim\js\jquery.colorbox.min.js" />
+    <Content Include="Yonetim\js\jquery.cookie.js" />
+    <Content Include="Yonetim\js\jquery.dataTables.min.js" />
+    <Content Include="Yonetim\js\jquery.elfinder.min.js" />
+    <Content Include="Yonetim\js\jquery.flot.min.js" />
+    <Content Include="Yonetim\js\jquery.flot.pie.min.js" />
+    <Content Include="Yonetim\js\jquery.flot.resize.min.js" />
+    <Content Include="Yonetim\js\jquery.flot.stack.js" />
+    <Content Include="Yonetim\js\jquery.history.js" />
+    <Content Include="Yonetim\js\jquery.iphone.toggle.js" />
+    <Content Include="Yonetim\js\jquery.js" />
+    <Content Include="Yonetim\js\jquery.noty.js" />
+    <Content Include="Yonetim\js\jquery.raty.min.js" />
+    <Content Include="Yonetim\js\jquery.uniform.min.js" />
+    <Content Include="Yonetim\js\jquery.uploadify-3.1.min.js" />
+    <Content Include="Yonetim\misc\check-exists.php" />
+    <Content Include="Yonetim\misc\elfinder-connector\connector.php" />
+    <Content Include="Yonetim\misc\elfinder-connector\elFinder.class.php" />
+    <Content Include="Yonetim\misc\elfinder-connector\elFinderConnector.class.php" />
+    <Content Include="Yonetim\misc\elfinder-connector\elFinderVolumeDriver.class.php" />
+    <Content Include="Yonetim\misc\elfinder-connector\elFinderVolumeLocalFileSystem.class.php" />
+    <Content Include="Yonetim\misc\elfinder-connector\elFinderVolumeMySQL.class.php" />
+    <Content Include="Yonetim\misc\elfinder-connector\MySQLStorage.sql" />
+    <Content Include="Yonetim\misc\uploadify.php" />
+    <Content Include="Yonetim\misc\uploadify.swf" />
+    <Content Include="Yonetim\OgrenciDetayEkle.aspx" />
+    <Content Include="Yonetim\OgrenciKayit.aspx" />
+    <Content Include="Yonetim\Ogrenciler.aspx" />
+    <Content Include="Yonetim\php-version\blank.php" />
+    <Content Include="Yonetim\php-version\calendar.php" />
+    <Content Include="Yonetim\php-version\chart.php" />
+    <Content Include="Yonetim\php-version\error.php" />
+    <Content Include="Yonetim\php-version\file-manager.php" />
+    <Content Include="Yonetim\php-version\footer.php" />
+    <Content Include="Yonetim\php-version\form.php" />
+    <Content Include="Yonetim\php-version\gallery.php" />
+    <Content Include="Yonetim\php-version\grid.php" />
+    <Content Include="Yonetim\php-version\header.php" />
+    <Content Include="Yonetim\php-version\icon.php" />
+    <Content Include="Yonetim\php-version\index.php" />
+    <Content Include="Yonetim\php-version\login.php" />
+    <Content Include="Yonetim\php-version\table.php" />
+    <Content Include="Yonetim\php-version\tour.php" />
+    <Content Include="Yonetim\php-version\typography.php" />
+    <Content Include="Yonetim\php-version\ui.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\Class1.cs" />
+    <Compile Include="App_Code\Kodlar.cs" />
+    <Compile Include="App_Code\Kontrol.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\VT.cs" />
+    <Compile Include="App_Code\VT2.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Hakkimizda.aspx.cs">
+      <DependentUpon>Hakkimizda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hakkimizda.aspx.designer.cs">
+      <DependentUpon>Hakkimizda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Iletisim.aspx.cs">
+      <DependentUpon>Iletisim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Iletisim.aspx.designer.cs">
+      <DependentUpon>Iletisim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryStringVeriOku.aspx.cs">
+      <DependentUpon>QueryStringVeriOku.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QueryStringVeriOku.aspx.designer.cs">
+      <DependentUpon>QueryStringVeriOku.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QueryStringVeriYaz.aspx.cs">
+      <DependentUpon>QueryStringVeriYaz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QueryStringVeriYaz.aspx.designer.cs">
+      <DependentUpon>QueryStringVeriYaz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SessionOku.aspx.cs">
+      <DependentUpon>SessionOku.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SessionOku.aspx.designer.cs">
+      <DependentUpon>SessionOku.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SessionYaz.aspx.cs">
+      <DependentUpon>SessionYaz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SessionYaz.aspx.designer.cs">
+      <DependentUpon>SessionYaz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetim\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetim\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetim\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetim\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetim\DersEkle.aspx.cs">
+      <DependentUpon>DersEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetim\DersEkle.aspx.designer.cs">
+      <DependentUpon>DersEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetim\DersOgrenciEkle.aspx.cs">
+      <DependentUpon>DersOgrenciEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetim\DersOgrenciEkle.aspx.designer.cs">
+      <DependentUpon>DersOgrenciEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetim\Giris.aspx.cs">
+      <DependentUpon>Giris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetim\Giris.aspx.designer.cs">
+      <DependentUpon>Giris.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetim\Iletisim.aspx.cs">
+      <DependentUpon>Iletisim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetim\Iletisim.aspx.designer.cs">
+      <DependentUpon>Iletisim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetim\KullaniciEkle.aspx.cs">
+      <DependentUpon>KullaniciEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetim\KullaniciEkle.aspx.designer.cs">
+      <DependentUpon>KullaniciEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetim\Kullanicilar.aspx.cs">
+      <DependentUpon>Kullanicilar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetim\Kullanicilar.aspx.designer.cs">
+      <DependentUpon>Kullanicilar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetim\OgrenciDetayEkle.aspx.cs">
+      <DependentUpon>OgrenciDetayEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetim\OgrenciDetayEkle.aspx.designer.cs">
+      <DependentUpon>OgrenciDetayEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetim\OgrenciKayit.aspx.cs">
+      <DependentUpon>OgrenciKayit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetim\OgrenciKayit.aspx.designer.cs">
+      <DependentUpon>OgrenciKayit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetim\Ogrenciler.aspx.cs">
+      <DependentUpon>Ogrenciler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetim\Ogrenciler.aspx.designer.cs">
+      <DependentUpon>Ogrenciler.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Uploads\Kullanicilar\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50360</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50360/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
